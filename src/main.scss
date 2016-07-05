@@ -1,3 +1,8 @@
 body {
-	background: firebrick;
+	nav.guide {
+		ul li {
+			display: inline-block;
+			margin-left: 5px;
+		}
+	}
 }

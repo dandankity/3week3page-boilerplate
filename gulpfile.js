@@ -1,15 +1,27 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var gls = require('gulp-live-server');
+var browserSync = require('browser-sync').create();
+
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: './'
+    },
+  })
+});
 
 gulp.task('sass', function () {
   return gulp.src('./src/main.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist'))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
  
 
-gulp.task('serve', function() {
+gulp.task('serve', ['browserSync','sass'], function() {
   //2. serve at custom port
   var server = gls.static('./', 3030);
   // var server = gls('./', true, 3030);
