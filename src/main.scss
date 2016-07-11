@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	input {
+	a, input {
 		cursor: pointer;
 	}
 	header {
@@ -22,15 +22,15 @@ body {
 	    display: inline-block;
 	    border-left: 1px solid #E5E5E5;
 	    border-right: 1px solid #E5E5E5;
-		ul {
-	    padding: 0;
-			li {
-				display: inline-block;
-				margin-right: 5%;
-				color: #AAA;
-				&:first-child { margin-left: 5%; }
+			ul {
+		    padding: 0;
+				li {
+					display: inline-block;
+					margin-right: 5%;
+					color: #AAA;
+					&:first-child { margin-left: 5%; }
+				}
 			}
-		 }
 	  }
 
 	  div.operations {
@@ -58,6 +58,7 @@ body {
         font-weight: normal;
         margin: 0;
         font-size: 26px;
+        font-family: fantasy;
 			}
 
 			input {
@@ -92,12 +93,15 @@ body {
   			top: -230px;
   			text-transform: uppercase;
   			color: #fff;
-    			span {
-    				border: 1px solid #AAA;
-    				padding: 5px 20px;
-    				margin: 0 20px;
-    			}
-            }	
+  			a {
+  				border: 1px solid #989492;
+  				padding: 5px 20px;
+  				margin: 0 20px;
+  				border-radius: 2px;
+			    font-family: fantasy;
+  				&:hover { background-color: #989492; }
+  			}
+      }	
 		}
 
 		article.article2 {
@@ -146,7 +150,7 @@ body {
 				display: table-cell;
   			vertical-align: middle;
   			width: 40%;
-  			padding-left: 20%;
+  			padding-left: 18%;
 				.article_title { text-align: left; }
 				p { color: #fff; }
 				input {
@@ -171,6 +175,7 @@ body {
 				text-transform: uppercase;
 				text-align: center;
 				margin: 80px 0 50px 0;
+		    font-family: fantasy;
 			}
 			.box {
 				width: 20%;
@@ -183,6 +188,7 @@ body {
 				.number { 
 					font-size: 48px;
 					margin: 30px 0 20px 0;
+			    font-family: fantasy;
 				}
 			}
 			.box-green {color: #93CFB1;}
